@@ -15,8 +15,10 @@ const MyStore = ({ apple, orange, buyApple, buyOrange }) => {
 };
 
 const stateToProps = (state) => {
-  const fruitState = { apple: state.apple, orange: state.orange };
-  return fruitState;
+  return {
+    apple: state.apple,
+    orange: state.orange,
+  };
 };
 
 const dispatchToProps = (dispatch) => {

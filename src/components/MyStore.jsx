@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { buyApple, buyOrange } from "../redux/fruit/FruitAction";
+import { buyApple, buyOrange } from "../redux/fruit/fruitAction";
 
 const MyStore = ({ apple, orange, buyApple, buyOrange }) => {
   return (
@@ -15,10 +15,8 @@ const MyStore = ({ apple, orange, buyApple, buyOrange }) => {
 };
 
 const stateToProps = (state) => {
-  return {
-    apple: state.apple,
-    orange: state.orange,
-  };
+  // console.log(state); // test
+  return { apple: state.apple, orange: state.orange };
 };
 
 const dispatchToProps = (dispatch) => {
